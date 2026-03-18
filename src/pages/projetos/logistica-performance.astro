@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Análise de Eficiência Logística — Longevitech">
+  
+
+  <section class="mx-auto w-full max-w-5xl px-6 py-12">
+    
+    <h1 class="text-3xl font-extrabold text-zinc-900">
+      Análise de Eficiência Logística — Longevitech
+    </h1>
+
+    <p class="mt-3 text-sm text-zinc-600 max-w-3xl">
+      Projeto desenvolvido com foco na análise de eficiência operacional do setor logístico, 
+      avaliando o impacto de mudanças organizacionais através de indicadores de desempenho.
+    </p>
+
+    <!-- CONTEXTO -->
+    <div class="mt-8">
+      <h2 class="text-lg font-semibold text-zinc-900">Contexto</h2>
+      <p class="mt-2 text-sm text-zinc-600">
+        A empresa forneceu uma base de dados em Excel contendo informações de pedidos, prazos e entregas.
+        Os dados apresentavam inconsistências relevantes, como erros de digitação, datas incorretas 
+        (ex: anos inválidos como 2052) e padronização inconsistente de clientes e transportadoras.
+      </p>
+    </div>
+
+    <!-- DESAFIO -->
+    <div class="mt-6">
+      <h2 class="text-lg font-semibold text-zinc-900">Desafio</h2>
+      <p class="mt-2 text-sm text-zinc-600">
+        Garantir a confiabilidade dos dados para permitir análises consistentes de desempenho logístico,
+        além de medir o impacto de mudanças organizacionais no tempo médio de entrega e eficiência operacional.
+      </p>
+    </div>
+
+    <!-- SOLUÇÃO -->
+    <div class="mt-6">
+      <h2 class="text-lg font-semibold text-zinc-900">Solução</h2>
+      <ul class="mt-2 list-disc pl-5 text-sm text-zinc-600 space-y-1">
+        <li>Limpeza e padronização de dados (nomes, datas e inconsistências)</li>
+        <li>Criação de métricas de tempo de entrega e eficiência</li>
+        <li>Análise temporal para comparação antes vs depois</li>
+        <li>Construção de dashboard interativo no Power BI</li>
+      </ul>
+    </div>
+
+    <!-- IMPACTO -->
+    <div class="mt-6">
+      <h2 class="text-lg font-semibold text-zinc-900">Impacto</h2>
+      <p class="mt-2 text-sm text-zinc-600">
+        O projeto permitiu identificar padrões de ineficiência, medir melhorias operacionais e apoiar
+        decisões estratégicas baseadas em dados confiáveis, trazendo maior visibilidade sobre o processo logístico.
+      </p>
+    </div>
+
+    <!-- IMAGENS -->
+    <div class="mt-10 space-y-6">
+      
+      <div>
+        <h3 class="text-sm font-semibold text-zinc-900 mb-2">Base de dados original</h3>
+        <img src="/img/projetos/logistica-performance/dados.png" class="rounded-xl border" />
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold text-zinc-900 mb-2">Dashboard geral</h3>
+        <img src="/img/projetos/logistica-performance/dashboard.png" class="rounded-xl border" />
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold text-zinc-900 mb-2">Análise de eficiência</h3>
+        <img src="/img/projetos/logistica-performance/eficiencia.png" class="rounded-xl border" />
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold text-zinc-900 mb-2">Exploração com tooltips</h3>
+        <img src="/img/projetos/logistica-performance/tiptools.png" class="rounded-xl border" />
+      </div>
+
+    </div>
+
+  </section>
+</Layout>

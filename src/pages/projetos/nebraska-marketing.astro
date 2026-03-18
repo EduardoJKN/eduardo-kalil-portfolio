@@ -1,0 +1,130 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Análise de Campanhas Facebook Ads — Nebraska">
+  <section class="mx-auto w-full max-w-6xl px-6 py-14 space-y-12">
+
+    <header class="space-y-5">
+      <div class="flex flex-wrap gap-2">
+        {["Marketing Analytics", "Facebook Ads", "ROI", "Performance"].map((item) => (
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[11px] text-zinc-700">
+            {item}
+          </span>
+        ))}
+      </div>
+
+      <h1 class="text-4xl font-extrabold text-zinc-900">
+        Análise de Campanhas Facebook Ads — Nebraska
+      </h1>
+
+      <p class="max-w-3xl text-zinc-600">
+        Dashboard desenvolvido para análise de campanhas de Facebook Ads,
+        permitindo acompanhar performance, custo, conversões e identificar
+        oportunidades de otimização de investimento.
+      </p>
+
+      <a href="/projetos" class="text-sm text-zinc-600 hover:underline">
+        ← Voltar para projetos
+      </a>
+    </header>
+
+    <!-- CONTEXTO -->
+    <section class="grid md:grid-cols-3 gap-5">
+      <div class="card">
+        <h3>Contexto</h3>
+        <p>
+          As campanhas de marketing não possuíam uma visão consolidada de performance,
+          dificultando a identificação de quais campanhas geravam resultado real.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Solução</h3>
+        <p>
+          Criação de um dashboard com integração de dados via Python, consolidando métricas
+          como CPA, CTR, CPC e ROI por campanha e público.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Impacto</h3>
+        <p>
+          Possibilitou otimização de orçamento, identificação de campanhas ineficientes
+          e melhoria na tomada de decisão baseada em dados.
+        </p>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section>
+      <h2 class="text-2xl font-semibold">Visão Geral</h2>
+
+      <img src="/img/projetos/nebraska-marketing/dashboard.png" class="rounded-xl mt-4" />
+
+      <p class="text-sm text-zinc-600 mt-2">
+        Visão consolidada das campanhas com KPIs principais de performance.
+      </p>
+    </section>
+
+    <!-- DETALHES -->
+    <section class="grid md:grid-cols-2 gap-5">
+
+      <img src="/img/projetos/nebraska-marketing/campanhas.png" class="rounded-xl" />
+      <img src="/img/projetos/nebraska-marketing/conversao.png" class="rounded-xl" />
+
+      <img src="/img/projetos/nebraska-marketing/segmento.png" class="rounded-xl" />
+      <img src="/img/projetos/nebraska-marketing/ineficiencia.png" class="rounded-xl" />
+
+      <img src="/img/projetos/nebraska-marketing/orcamento.png" class="rounded-xl" />
+      <img src="/img/projetos/nebraska-marketing/dados.png" class="rounded-xl" />
+
+    </section>
+
+    <!-- PIPELINE -->
+    <section>
+      <h2 class="text-xl font-semibold">Pipeline de Dados</h2>
+
+      <img src="/img/projetos/nebraska-marketing/codigo.png" class="rounded-xl mt-4" />
+
+      <p class="text-sm text-zinc-600 mt-2">
+        Script em Python responsável por extrair, tratar e estruturar os dados das campanhas.
+      </p>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="grid md:grid-cols-2 gap-5">
+
+      <div class="card">
+        <h3>Como funciona</h3>
+        <ul>
+          <li>Extração de dados de campanhas</li>
+          <li>Tratamento com Python</li>
+          <li>Estruturação em planilha</li>
+          <li>Visualização no Looker</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Stack</h3>
+        <ul>
+          <li>Looker Studio</li>
+          <li>Python</li>
+          <li>Google Sheets</li>
+          <li>Facebook Ads</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </section>
+
+  <style>
+    .card {
+      border: 1px solid #e4e4e7;
+      border-radius: 12px;
+      padding: 16px;
+      background: white;
+    }
+  </style>
+</Layout>

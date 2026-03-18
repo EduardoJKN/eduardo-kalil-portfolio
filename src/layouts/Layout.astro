@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+
+const { title = "Eduardo Kalil — Kalil Data Solutions" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta
+    name="description"
+    content="Portfólio de Eduardo Kalil — Analista de Dados focado em BI, automações com Python e produtos de dados."
+    />
+  </head>
+
+  <body class="min-h-screen bg-zinc-50 text-zinc-900 antialiased">
+    <Header />
+
+    <main class="mx-auto max-w-5xl px-6 py-12">
+      <slot />
+    </main>
+
+    <footer class="border-t border-zinc-200">
+      <div class="mx-auto max-w-5xl px-6 py-10 text-sm text-zinc-500">
+        © 2026 Eduardo Kalil · Kalil Data Solutions
+      </div>
+    </footer>
+  </body>
+</html>

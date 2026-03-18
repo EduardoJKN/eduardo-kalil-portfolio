@@ -1,0 +1,331 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const categories = [
+  { key: "all", label: "Todos" },
+  { key: "bi", label: "BI & Dashboards" },
+  { key: "auto", label: "Automação" },
+  { key: "sql", label: "SQL / Modelagem" },
+  { key: "api", label: "APIs / Webhooks" },
+];
+
+const categoryMap = Object.fromEntries(categories.map((c) => [c.key, c.label]));
+
+const projects = [
+  {
+    title: "Análise Pareto ABC com PostgreSQL e Power BI",
+    type: "Projeto",
+    badge: "SQL + BI",
+    subtitle: "Classificação ABC por valor e quantidade com modelagem analítica",
+    desc: "Dashboard de Pareto (ABC) para identificar quais estados concentram a maior parte do faturamento e dos pedidos, com ranking, acumulado progressivo, classificação ABC e apoio de SQL/PostgreSQL.",
+    impact: "Classificação analítica para priorização de regiões e apoio à tomada de decisão comercial.",
+    categories: ["bi", "sql"],
+    tags: ["Power BI", "PostgreSQL", "SQL", "DAX", "Modelagem"],
+    image: "/img/projetos/pareto-abc/pareto-valor.png",
+    links: {
+      details: "/projetos/pareto-abc",
+      github: "",
+      demo: "",
+    },
+  },
+  {
+    title: "Monitoramento iFood + Alertas no Telegram",
+    type: "Projeto",
+    badge: "Em destaque",
+    subtitle: "Automação + scraping + histórico ON/OFF",
+    desc: "Robô que monitora disponibilidade de itens por seção, mantém histórico e envia alertas claros no Telegram. Foco em confiabilidade e comunicação.",
+    impact: "Monitoramento automatizado com histórico de status e alertas operacionais em tempo real.",
+    categories: ["auto", "api"],
+    tags: ["Python", "Telegram", "Web scraping"],
+    image: "/img/projetos/ifood/dashboard.jpg",
+    links: {
+      details: "/projetos/ifood-monitoramento",
+      github: "https://github.com/EduardoJKN/ifood-monitor-bot-telegram",
+      demo: "",
+    },
+  },
+  {
+    title: "Análise de Performance de Funcionários — Nebraska",
+    type: "Case",
+    badge: "Case",
+    subtitle: "Performance operacional + metas + custo individual",
+    desc: "Dashboard para análise de produtividade, metas e custo por funcionário, permitindo avaliação de eficiência operacional e tomada de decisão baseada em dados.",
+    impact: "Leitura mais clara de metas, produtividade e custo individual para acompanhamento gerencial.",
+    categories: ["bi"],
+    tags: ["Power BI", "KPIs", "Performance"],
+    image: "/img/projetos/nebraska-performance/dashboard.png",
+    links: {
+      details: "/projetos/nebraska-performance",
+      github: "",
+      demo: "",
+    },
+  },
+  {
+    title: "Análise Tributária com Power BI (ICMS, PIS e COFINS)",
+    type: "Case",
+    badge: "Financeiro",
+    subtitle: "Apuração fiscal, débito vs crédito e indicadores tributários",
+    desc: "Dashboard tributário desenvolvido em Power BI para análise de ICMS, PIS e COFINS, com comparação entre débito e crédito, identificação de saldo fiscal, análise por categoria e publicação em workspace no Power BI Service.",
+    impact: "Organização visual da apuração fiscal com apoio à leitura de saldo e indicadores tributários.",
+    categories: ["bi"],
+    tags: ["Power BI", "DAX", "Financeiro", "Fiscal"],
+    image: "/img/projetos/tributario/dashboard.png",
+    links: {
+      details: "/projetos/tributario",
+      github: "",
+      demo: "",
+    },
+  },
+  {
+    title: "Dashboard de Performance de Campanhas — Nebraska",
+    type: "Case",
+    badge: "Case",
+    subtitle: "Marketing analytics + performance + ROI",
+    desc: "Dashboard para análise de campanhas veiculadas no Facebook Ads, com foco em CPA, CTR, CPC, ROI e eficiência de investimento, permitindo identificar campanhas performáticas e otimizar orçamento.",
+    impact: "Apoio à otimização de campanhas com leitura objetiva de investimento, performance e retorno.",
+    categories: ["bi", "api"],
+    tags: ["Looker Studio", "Python", "Marketing Analytics"],
+    image: "/img/projetos/nebraska-marketing/dashboard.png",
+    links: {
+      details: "/projetos/nebraska-marketing",
+      github: "",
+      demo: "",
+    },
+  },
+  {
+    title: "Análise de Eficiência Logística — Longevitech",
+    type: "Case",
+    badge: "Impacto real",
+    subtitle: "Antes vs depois + limpeza de dados + eficiência operacional",
+    desc: "Projeto focado na análise de eficiência logística a partir de dados brutos desorganizados. Foi realizada a padronização das informações (nomes, datas e inconsistências), permitindo análises confiáveis sobre tempo de entrega, produtividade e impacto de mudanças operacionais.",
+    impact: "Transformação de dados desorganizados em leitura confiável para análise operacional e melhoria de processo.",
+    categories: ["bi"],
+    tags: ["Power BI", "Data Cleaning", "Análise Temporal"],
+    image: "/img/projetos/logistica-performance/dashboard.png",
+    links: {
+      details: "/projetos/logistica-performance",
+      github: "",
+      demo: "",
+    },
+  },
+];
+---
+
+<Layout title="Projetos — Eduardo Kalil">
+  <section class="mx-auto w-full max-w-6xl px-6 py-16 md:py-20">
+    <header class="mb-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
+        Portfólio
+      </p>
+
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
+        Projetos
+      </h1>
+
+      <p class="mt-3 max-w-3xl text-base leading-7 text-zinc-600">
+        Cases e projetos autorais em BI, automação e produtos de dados, com foco em
+        clareza, eficiência operacional e impacto real na tomada de decisão.
+      </p>
+
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <span
+          id="projects-count"
+          class="inline-flex rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700"
+        >
+          {projects.length} projetos selecionados
+        </span>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-2" id="filters">
+        {categories.map((c, index) => (
+          <button
+            type="button"
+            data-filter={c.key}
+            class={`filter-btn rounded-full border px-3 py-1.5 text-xs font-medium transition ${
+              index === 0
+                ? "border-zinc-900 bg-zinc-900 text-white"
+                : "border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50"
+            }`}
+          >
+            {c.label}
+          </button>
+        ))}
+      </div>
+    </header>
+
+    <div class="space-y-5" id="projects-list">
+      {projects.map((p) => (
+        <article
+          class="project-card group rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-zinc-300 hover:shadow-md"
+          data-categories={p.categories.join(",")}
+        >
+          <div class="flex items-start justify-between gap-6">
+            <div class="min-w-0 flex-1">
+              <div class="flex flex-wrap items-center gap-2 text-xs text-zinc-500">
+                <span>{p.type}</span>
+                <span class="text-zinc-300">•</span>
+                <span>{p.subtitle}</span>
+              </div>
+
+              <h2 class="mt-2 text-lg font-semibold text-zinc-900 transition group-hover:text-zinc-700">
+                {p.title}
+              </h2>
+
+              <p class="mt-2 text-sm leading-6 text-zinc-600">{p.desc}</p>
+
+              <p class="mt-3 text-xs font-medium text-zinc-500">
+                {p.impact}
+              </p>
+
+              <div class="mt-3 flex flex-wrap gap-2">
+                {p.categories.map((t) => (
+                  <span class="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-[11px] text-zinc-700">
+                    {categoryMap[t] ?? t}
+                  </span>
+                ))}
+              </div>
+
+              <div class="mt-2 flex flex-wrap gap-2">
+                {p.tags.map((s) => (
+                  <span class="rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-[11px] text-zinc-700">
+                    {s}
+                  </span>
+                ))}
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                {p.links.details && p.links.details !== "#" && (
+                  <a
+                    class="rounded-xl bg-zinc-900 px-4 py-2 text-xs font-semibold text-white transition hover:bg-zinc-800"
+                    href={p.links.details}
+                  >
+                    Ver detalhes
+                  </a>
+                )}
+
+                {p.links.github && (
+                  <a
+                    class="rounded-xl border border-zinc-200 px-4 py-2 text-xs font-semibold text-zinc-800 transition hover:bg-zinc-50"
+                    href={p.links.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                )}
+
+                {p.links.demo && (
+                  <a
+                    class="rounded-xl border border-zinc-200 px-4 py-2 text-xs font-semibold text-zinc-800 transition hover:bg-zinc-50"
+                    href={p.links.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a>
+                )}
+              </div>
+            </div>
+
+            <div class="flex flex-col items-end gap-3">
+              {p.badge ? (
+                <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[11px] font-medium text-zinc-700">
+                  {p.badge}
+                </span>
+              ) : null}
+
+              {p.image ? (
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  class="h-24 w-24 rounded-2xl border border-zinc-200 object-cover"
+                  loading="lazy"
+                />
+              ) : (
+                <div class="h-24 w-24 rounded-2xl border border-zinc-200 bg-zinc-50" />
+              )}
+            </div>
+          </div>
+        </article>
+      ))}
+
+      <div
+        id="empty-state"
+        class="hidden rounded-2xl border border-zinc-200 bg-white p-6 text-sm text-zinc-600"
+      >
+        Nenhum projeto nessa categoria por enquanto.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".project-card");
+    const emptyState = document.getElementById("empty-state");
+    const projectsCount = document.getElementById("projects-count");
+
+    function setActiveButton(activeKey) {
+      buttons.forEach((btn) => {
+        const isActive = btn.dataset.filter === activeKey;
+
+        btn.classList.toggle("border-zinc-900", isActive);
+        btn.classList.toggle("bg-zinc-900", isActive);
+        btn.classList.toggle("text-white", isActive);
+
+        btn.classList.toggle("border-zinc-200", !isActive);
+        btn.classList.toggle("bg-white", !isActive);
+        btn.classList.toggle("text-zinc-700", !isActive);
+      });
+    }
+
+    function updateCount(count, category) {
+      if (!projectsCount) return;
+
+      const label =
+        category === "all"
+          ? `${count} projetos selecionados`
+          : `${count} projeto${count === 1 ? "" : "s"} nessa categoria`;
+
+      projectsCount.textContent = label;
+    }
+
+    function filterProjects(category) {
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const categories = card.dataset.categories?.split(",") ?? [];
+        const shouldShow = category === "all" || categories.includes(category);
+
+        card.style.display = shouldShow ? "block" : "none";
+
+        if (shouldShow) visibleCount++;
+      });
+
+      if (emptyState) {
+        emptyState.classList.toggle("hidden", visibleCount > 0);
+      }
+
+      updateCount(visibleCount, category);
+
+      const url = new URL(window.location.href);
+      if (category === "all") {
+        url.searchParams.delete("cat");
+      } else {
+        url.searchParams.set("cat", category);
+      }
+      window.history.replaceState({}, "", url);
+    }
+
+    const initialCategory = new URLSearchParams(window.location.search).get("cat") || "all";
+    setActiveButton(initialCategory);
+    filterProjects(initialCategory);
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const category = btn.dataset.filter || "all";
+        setActiveButton(category);
+        filterProjects(category);
+      });
+    });
+  </script>
+</Layout>

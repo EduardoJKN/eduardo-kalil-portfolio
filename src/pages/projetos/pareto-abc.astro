@@ -1,0 +1,152 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Pareto ABC — Eduardo Kalil">
+
+  <section class="mx-auto w-full max-w-5xl px-6 py-12 space-y-10">
+    <header class="space-y-4">
+      <div class="flex flex-wrap gap-2">
+        <span class="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700">Power BI</span>
+        <span class="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700">PostgreSQL</span>
+        <span class="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700">SQL</span>
+        <span class="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700">DAX</span>
+        <span class="rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700">Classificação ABC</span>
+      </div>
+
+      <h1 class="max-w-4xl text-4xl font-extrabold tracking-tight text-zinc-900">
+        Análise Pareto ABC com PostgreSQL e Power BI
+      </h1>
+
+      <p class="max-w-3xl text-base leading-7 text-zinc-600">
+        Dashboard analítico criado para identificar quais estados concentram a maior parte dos pedidos
+        e do faturamento, aplicando ranking, acumulado progressivo e classificação ABC com suporte de
+        modelagem em Power BI e consulta SQL em PostgreSQL.
+      </p>
+
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="/projetos"
+          class="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-800 hover:bg-zinc-50"
+        >
+          ← Voltar para projetos
+        </a>
+      </div>
+    </header>
+
+    <section class="grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
+        <h2 class="text-sm font-semibold text-zinc-900">Contexto</h2>
+        <p class="mt-3 text-sm leading-6 text-zinc-600">
+          O objetivo era descobrir quais estados realmente concentravam a maior parte do resultado,
+          evitando análise superficial e facilitando priorização comercial e operacional.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
+        <h2 class="text-sm font-semibold text-zinc-900">Solução</h2>
+        <p class="mt-3 text-sm leading-6 text-zinc-600">
+          Foi desenvolvido um dashboard com visão por valor e por quantidade, ranking ordenado,
+          acumulado percentual, classificação ABC e tooltip dinâmico para leitura detalhada por estado.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
+        <h2 class="text-sm font-semibold text-zinc-900">Diferencial</h2>
+        <p class="mt-3 text-sm leading-6 text-zinc-600">
+          O projeto combina lógica de negócio, modelagem analítica, medidas DAX e uso de PostgreSQL
+          como fonte estruturada, indo além de um dashboard apenas visual.
+        </p>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl font-bold text-zinc-900">Demonstração do dashboard</h2>
+        <span class="text-xs text-zinc-500">Clique nas imagens para ampliar</span>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm">
+        <img
+          src="/img/projetos/pareto-abc/pareto-valor.png"
+          alt="Dashboard Pareto ABC por valor"
+          class="w-full rounded-xl object-cover"
+          loading="lazy"
+        />
+        <p class="mt-3 text-sm text-zinc-600">
+          Visão principal da análise Pareto por valor, com ranking dos estados, linha de acumulado
+          e classificação ABC aplicada ao faturamento.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm">
+          <img
+            src="/img/projetos/pareto-abc/pareto-quantidade.png"
+            alt="Dashboard Pareto ABC por quantidade"
+            class="w-full rounded-xl object-cover"
+            loading="lazy"
+          />
+          <p class="mt-3 text-sm text-zinc-600">
+            Análise complementar por quantidade de pedidos, permitindo comparar concentração de volume
+            em relação à concentração de faturamento.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm">
+          <img
+            src="/img/projetos/pareto-abc/tooltip-estado.png"
+            alt="Tooltip dinâmico por estado na análise Pareto"
+            class="w-full rounded-xl object-cover"
+            loading="lazy"
+          />
+          <p class="mt-3 text-sm text-zinc-600">
+            Tooltip dinâmico exibindo detalhes do estado selecionado, como classe ABC, percentual acumulado
+            e total de pedidos.
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm">
+        <img
+          src="/img/projetos/pareto-abc/sql-postgres.png"
+          alt="Consulta SQL no PostgreSQL usada como base do projeto"
+          class="w-full rounded-xl object-cover"
+          loading="lazy"
+        />
+        <p class="mt-3 text-sm text-zinc-600">
+          Estrutura da base consultada em PostgreSQL, reforçando a integração entre SQL e Power BI
+          na construção do modelo analítico.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid gap-6 md:grid-cols-2">
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-zinc-900">O que o projeto demonstra</h2>
+        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-700">
+          <li>Ordenação dos estados por relevância em valor e quantidade</li>
+          <li>Cálculo de acumulado progressivo com leitura executiva</li>
+          <li>Classificação ABC com separação entre classes A, B e C</li>
+          <li>Identificação de concentração de resultado por estado</li>
+          <li>Aplicação prática do princípio de Pareto (80/20)</li>
+          <li>Navegação entre páginas para diferentes visões da análise</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-zinc-900">Stack utilizada</h2>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">Power BI</span>
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">PostgreSQL</span>
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">SQL</span>
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">DAX</span>
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">Modelagem de dados</span>
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">Ranking</span>
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">Acumulado percentual</span>
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">Classificação ABC</span>
+        </div>
+      </div>
+    </section>
+  </section>
+</Layout>

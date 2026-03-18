@@ -1,0 +1,150 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Análise de Performance de Funcionários — Nebraska">
+  <section class="mx-auto w-full max-w-6xl px-6 py-14 space-y-12">
+    <header class="space-y-5">
+      <div class="flex flex-wrap gap-2">
+        {["Power BI", "KPIs", "Performance", "Análise operacional"].map((item) => (
+          <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[11px] font-medium text-zinc-700">
+            {item}
+          </span>
+        ))}
+      </div>
+
+      <div class="space-y-3">
+        <h1 class="max-w-4xl text-4xl font-extrabold tracking-tight text-zinc-900 md:text-5xl">
+          Análise de Performance de Funcionários — Nebraska
+        </h1>
+
+        <p class="max-w-3xl text-base leading-7 text-zinc-600">
+          Dashboard criado para acompanhar produtividade individual, metas diárias e custo por funcionário,
+          permitindo avaliar se cada colaborador está entregando o resultado esperado e gerando valor compatível
+          com seu custo operacional.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 pt-1">
+        <a
+          href="/projetos"
+          class="rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+        >
+          ← Voltar para projetos
+        </a>
+      </div>
+    </header>
+
+    <section class="grid gap-5 md:grid-cols-3">
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <h2 class="text-sm font-semibold text-zinc-900">Contexto</h2>
+        <p class="mt-3 text-sm leading-6 text-zinc-600">
+          O time precisava entender com clareza se os funcionários estavam cumprindo as metas diárias
+          e se a performance individual estava coerente com o custo de cada colaborador.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <h2 class="text-sm font-semibold text-zinc-900">Solução</h2>
+        <p class="mt-3 text-sm leading-6 text-zinc-600">
+          Foi desenvolvido um dashboard com visão consolidada de meta vs realizado, médias, custo por colaborador
+          e evolução diária, permitindo filtros por funcionário e período.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <h2 class="text-sm font-semibold text-zinc-900">Impacto</h2>
+        <p class="mt-3 text-sm leading-6 text-zinc-600">
+          A análise passou a apoiar decisões operacionais com mais rapidez, facilitando a identificação
+          de baixa performance, eficiência de custo e oportunidades de ajuste no time.
+        </p>
+      </div>
+    </section>
+
+    <section class="space-y-5">
+      <div class="flex items-center justify-between gap-4">
+        <h2 class="text-2xl font-semibold text-zinc-900">Demonstração do dashboard</h2>
+        <p class="text-xs text-zinc-500">Clique nas imagens para ampliar</p>
+      </div>
+
+      <a
+        href="/img/projetos/nebraska-performance/dashboard.png"
+        target="_blank"
+        rel="noreferrer"
+        class="block overflow-hidden rounded-3xl border border-zinc-200 bg-white p-4 shadow-sm hover:bg-zinc-50"
+      >
+        <img
+          src="/img/projetos/nebraska-performance/dashboard.png"
+          alt="Visão geral do dashboard de performance de funcionários"
+          class="h-[460px] w-full rounded-2xl object-contain bg-zinc-50"
+          loading="lazy"
+        />
+        <p class="mt-4 text-sm text-zinc-600">
+          Visão geral com KPIs principais como total produzido, meta total, média, custo e diferença entre meta e realizado.
+        </p>
+      </a>
+
+      <div class="grid gap-5 md:grid-cols-2">
+        <a
+          href="/img/projetos/nebraska-performance/detalhe.png"
+          target="_blank"
+          rel="noreferrer"
+          class="block overflow-hidden rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm hover:bg-zinc-50"
+        >
+          <img
+            src="/img/projetos/nebraska-performance/detalhe.png"
+            alt="Gráficos detalhados de performance por funcionário"
+            class="h-96 w-full rounded-2xl object-contain bg-zinc-50"
+            loading="lazy"
+          />
+          <p class="mt-4 text-sm text-zinc-600">
+            Visão detalhada da evolução diária, comparação entre meta e realizado e acompanhamento visual da performance no período.
+          </p>
+        </a>
+
+        <a
+          href="/img/projetos/nebraska-performance/dados.png"
+          target="_blank"
+          rel="noreferrer"
+          class="block overflow-hidden rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm hover:bg-zinc-50"
+        >
+          <img
+            src="/img/projetos/nebraska-performance/dados.png"
+            alt="Base de dados usada para alimentar o dashboard"
+            class="h-96 w-full rounded-2xl object-contain bg-zinc-50"
+            loading="lazy"
+          />
+          <p class="mt-4 text-sm text-zinc-600">
+            Estrutura da base utilizada no projeto, contendo funcionários, realizado, meta, data, mês e ano para alimentar o modelo analítico.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section class="grid gap-5 md:grid-cols-2">
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <h2 class="text-lg font-semibold text-zinc-900">Como funciona</h2>
+
+        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-700">
+          <li>Consolidação de dados diários por funcionário</li>
+          <li>Cálculo de meta diária e produtividade realizada</li>
+          <li>Comparação entre custo individual e valor produzido</li>
+          <li>Filtros por colaborador e período</li>
+          <li>Acompanhamento operacional com visão gerencial</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <h2 class="text-lg font-semibold text-zinc-900">Stack utilizada</h2>
+
+        <div class="mt-4 flex flex-wrap gap-2">
+          {["Power BI", "Excel", "Modelagem de dados", "KPIs", "Análise de performance"].map((item) => (
+            <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  </section>
+</Layout>

@@ -1,0 +1,155 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Análise Tributária — Eduardo Kalil">
+
+  <section class="mx-auto w-full max-w-5xl px-6 py-12 space-y-10">
+    
+    <header class="space-y-4">
+      <div class="flex flex-wrap gap-2">
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag">ICMS</span>
+        <span class="tag">PIS</span>
+        <span class="tag">COFINS</span>
+        <span class="tag">Power BI Service</span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold text-zinc-900">
+        Análise Tributária com Power BI (ICMS, PIS e COFINS)
+      </h1>
+
+      <p class="text-zinc-600 max-w-3xl">
+        Projeto desenvolvido em parceria com um contador tributário, com foco na análise de ICMS, PIS e COFINS,
+        permitindo acompanhamento de débito e crédito, identificação de saldo fiscal e análise detalhada por categoria.
+      </p>
+
+      <a href="/projetos" class="btn-outline">← Voltar</a>
+    </header>
+
+    <!-- CONTEXTO -->
+    <section class="grid md:grid-cols-3 gap-4">
+      <div class="card">
+        <h3>Contexto</h3>
+        <p>
+          A análise foi realizada em conjunto com um contador tributário para avaliar a carga fiscal da empresa,
+          identificar distorções e melhorar a leitura dos dados tributários.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Solução</h3>
+        <p>
+          Construção de um dashboard com indicadores fiscais, comparação entre débito e crédito e análise por categoria,
+          com navegação entre visão executiva e detalhamento em matriz.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Diferencial</h3>
+        <p>
+          O projeto foi publicado em um workspace no Power BI Service, demonstrando domínio não só da análise,
+          mas também da distribuição e uso em ambiente corporativo.
+        </p>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Dashboard principal</h2>
+
+      <div class="card">
+        <img src="/img/projetos/tributario/dashboard.png" class="img" />
+
+        <p>
+          Visão executiva com indicadores como base de cálculo, ICMS sobre entradas e saídas,
+          saldo credor e alíquota efetiva, além de análise por categoria e proporção entre débito e crédito.
+        </p>
+      </div>
+    </section>
+
+    <!-- MATRIZ -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Detalhamento em matriz</h2>
+
+      <div class="card">
+        <img src="/img/projetos/tributario/matriz.png" class="img" />
+
+        <p>
+          Tabela hierárquica com detalhamento por tipo e categoria fiscal, permitindo análise aprofundada
+          da composição dos valores e validação dos dados tributários.
+        </p>
+      </div>
+    </section>
+
+    <!-- O QUE DEMONSTRA -->
+    <section class="card">
+      <h2 class="text-xl font-semibold">O que o projeto demonstra</h2>
+
+      <ul class="list">
+        <li>Comparação entre débito e crédito tributário</li>
+        <li>Identificação de saldo fiscal mensal</li>
+        <li>Análise por categorias contábeis</li>
+        <li>Aplicação de lógica tributária real</li>
+        <li>Publicação e compartilhamento via Power BI Service</li>
+      </ul>
+    </section>
+
+    <!-- STACK -->
+    <section class="card">
+      <h2 class="text-xl font-semibold">Stack utilizada</h2>
+
+      <div class="tags">
+        <span>Power BI</span>
+        <span>DAX</span>
+        <span>Modelagem de dados</span>
+        <span>Power BI Service</span>
+        <span>Indicadores financeiros</span>
+        <span>Análise fiscal</span>
+      </div>
+    </section>
+
+  </section>
+</Layout>
+
+<style>
+.tag {
+  border: 1px solid #e4e4e7;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.card {
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 20px;
+  background: white;
+}
+
+.img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.tags span {
+  border: 1px solid #e4e4e7;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.btn-outline {
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
+</style>
