@@ -17,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
         <p class="mt-5 max-w-2xl text-base leading-7 text-zinc-600">
           Eu sou <span class="font-semibold text-zinc-900">Eduardo Kalil</span>,
           fundador da <span class="font-semibold text-zinc-900">Kalil Data Solutions</span>,
-          e atuo com <span class="font-semibold text-zinc-900">análise de dados, BI e automação com Python</span>.
+          e atuo com <span class="font-semibold text-zinc-900">Ciência de Dados, BI e automação com Python</span>.
           Meu trabalho é transformar dados desorganizados em informação clara,
           estruturada e útil para o dia a dia das operações.
         </p>
@@ -175,7 +175,7 @@ import Layout from "../layouts/Layout.astro";
                 BI & Dashboards
               </p>
               <div class="mt-2 flex flex-wrap gap-2">
-                {["Power BI", "Looker Studio", "Tableau", "Modelagem dimensional"].map((t) => (
+                {["Power BI", "Looker Studio", "Streamlit", "Tableau", "Modelagem dimensional"].map((t) => (
                   <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
                     {t}
                   </span>
@@ -188,7 +188,7 @@ import Layout from "../layouts/Layout.astro";
                 Dados
               </p>
               <div class="mt-2 flex flex-wrap gap-2">
-                {["SQL", "ETL/ELT", "Qualidade de dados", "Métricas & KPIs"].map((t) => (
+                {["SQL", "PostgreSQL", "pandas", "ETL/ELT", "Qualidade de dados", "Métricas & KPIs"].map((t) => (
                   <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
                     {t}
                   </span>
@@ -201,7 +201,7 @@ import Layout from "../layouts/Layout.astro";
                 Automação
               </p>
               <div class="mt-2 flex flex-wrap gap-2">
-                {["Python", "APIs/Webhooks", "Bots", "Rotinas"].map((t) => (
+                {["Python", "n8n", "APIs/Webhooks", "Bots", "Rotinas"].map((t) => (
                   <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
                     {t}
                   </span>
@@ -234,6 +234,25 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </div>
+
+
+    <section class="mt-16 rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Experiência profissional recente</p>
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-zinc-900">Cientista de Dados — Reconecta</h2>
+      <p class="mt-2 text-sm text-zinc-500">Abril a setembro de 2026</p>
+      <p class="mt-4 max-w-3xl text-base leading-7 text-zinc-600">
+        Atuei na reconstrução do BI comercial, conectando Marketing, Pré-vendas, Vendas e Pós-vendas.
+        Trabalhei com Python, SQL, PostgreSQL, Streamlit e Looker Studio na análise de fontes,
+        padronização de indicadores e investigação de divergências entre sistemas e relatórios.
+      </p>
+      <p class="mt-4 max-w-3xl text-base leading-7 text-zinc-600">
+        Fui responsável pela construção e evolução do Dashboard do CRM HofOS, reunindo nove áreas de análise,
+        com definição de métricas, consultas SQL, interfaces, filtros, detalhamentos e exportações.
+        Também trabalhei nas análises de procedimentos, consumo de produtos e custos de materiais
+        e no desenvolvimento do projeto Saúde dos Dados em Python.
+      </p>
+      <a href="/projetos" class="mt-6 inline-flex rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-800">Conhecer os projetos</a>
+    </section>
 
     <section class="mt-16 rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
       <div class="mb-8">

@@ -7,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="grid items-center gap-10 md:grid-cols-2">
       <div class="max-w-3xl">
         <p class="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-          Analista de Dados · BI · Automação com Python
+          Cientista de Dados · BI · Automação com Python
         </p>
 
         <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl">
@@ -15,12 +15,12 @@ import Layout from "../layouts/Layout.astro";
         </h1>
 
         <p class="mt-5 max-w-2xl text-base leading-7 text-zinc-600">
-          Crio dashboards, automações e soluções de dados com foco em clareza,
-          eficiência operacional e apoio à tomada de decisão.
+          Construo dashboards, automações em Python e análises de negócio. Minha experiência inclui
+          integração de fontes, reconstrução de BI comercial e investigação da qualidade dos dados.
         </p>
 
         <p class="mt-3 text-sm font-medium text-zinc-500">
-          Power BI · SQL · Python · Looker Studio · PostgreSQL
+          Python · SQL · PostgreSQL · Streamlit · Power BI · Looker Studio
         </p>
 
         <div class="mt-8 flex flex-wrap gap-3">
@@ -58,7 +58,7 @@ import Layout from "../layouts/Layout.astro";
           <div class="mt-6 grid grid-cols-2 gap-4">
             <div class="rounded-2xl bg-zinc-50 p-4">
               <p class="text-xs text-zinc-500">Projetos</p>
-              <p class="mt-1 text-2xl font-extrabold text-zinc-900">6+</p>
+              <p class="mt-1 text-2xl font-extrabold text-zinc-900">10</p>
             </div>
 
             <div class="rounded-2xl bg-zinc-50 p-4">
@@ -76,7 +76,7 @@ import Layout from "../layouts/Layout.astro";
             <div class="rounded-2xl bg-zinc-50 p-4">
               <p class="text-xs text-zinc-500">Áreas</p>
               <p class="mt-1 text-sm font-semibold text-zinc-900">
-                Fiscal · Marketing
+                Comercial · Operações · Fiscal
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ import Layout from "../layouts/Layout.astro";
                 e apoio à decisão.
               </p>
               <p class="mt-4 text-xs font-medium text-zinc-500">
-                Power BI · Looker Studio · Tableau
+                Power BI · Looker Studio · Streamlit · Tableau
               </p>
             </div>
             <span class="text-lg text-zinc-400 transition group-hover:translate-x-0.5 group-hover:text-zinc-700">
@@ -172,58 +172,41 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <p class="text-sm font-medium text-zinc-500">Projeto em destaque</p>
           <h2 class="mt-1 text-2xl font-bold tracking-tight text-zinc-900">
-            Análise Pareto ABC com PostgreSQL e Power BI
+            Construção e evolução do Dashboard — CRM HofOS
           </h2>
         </div>
 
-        <a
-          href="/projetos/pareto-abc"
-          class="text-sm font-semibold text-zinc-900 transition hover:text-zinc-700"
-        >
+        <a href="/projetos/dashboard-hofos" class="text-sm font-semibold text-zinc-900 transition hover:text-zinc-700">
           Ver case →
         </a>
       </div>
 
       <div class="grid gap-6 rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm md:grid-cols-[1.2fr,0.8fr]">
-        <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
+        <a href="/projetos/dashboard-hofos" class="block overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-900" aria-label="Ver o case Dashboard HofOS">
           <img
-            src="/img/projetos/pareto-abc/pareto-valor.png"
-            alt="Projeto Pareto ABC com PostgreSQL e Power BI"
-            class="h-full w-full object-cover"
+            src="/img/projetos/dashboard-hofos/01-dashboard-visao-geral.png"
+            alt="Visão geral do Dashboard HofOS com dados fictícios para demonstração"
+            class="block w-full object-contain"
             loading="lazy"
           />
-        </div>
+        </a>
 
         <div class="flex flex-col justify-center">
           <p class="text-sm leading-7 text-zinc-600">
-            Dashboard desenvolvido para identificar quais estados concentram a maior
-            parte do faturamento e dos pedidos, com ranking progressivo, acumulado,
-            classificação ABC e apoio de modelagem analítica em SQL/PostgreSQL.
+            Fui responsável pela construção e evolução do dashboard do CRM HofOS,
+            reunindo análises comerciais, financeiras, de marketing e atendimento.
+            Trabalhei da definição das métricas e regras de negócio às consultas,
+            interfaces, filtros e validação dos indicadores.
           </p>
 
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
-              Power BI
-            </span>
-            <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
-              PostgreSQL
-            </span>
-            <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
-              SQL
-            </span>
-            <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
-              DAX
-            </span>
-            <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
-              Modelagem
-            </span>
+            {['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'SQL'].map((tag) => (
+              <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">{tag}</span>
+            ))}
           </div>
 
           <div class="mt-6">
-            <a
-              href="/projetos/pareto-abc"
-              class="inline-flex rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-zinc-800"
-            >
+            <a href="/projetos/dashboard-hofos" class="inline-flex rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-zinc-800">
               Explorar projeto
             </a>
           </div>

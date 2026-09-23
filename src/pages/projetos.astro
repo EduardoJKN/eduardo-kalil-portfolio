@@ -12,6 +12,109 @@ const categories = [
 const categoryMap = Object.fromEntries(categories.map((c) => [c.key, c.label]));
 
 const projects = [
+{
+  "title": "Construção e evolução do Dashboard — CRM HofOS",
+  "type": "Case",
+  "badge": "Responsável pelo projeto",
+  "subtitle": "Dashboard integrado com nove áreas de análise",
+  "desc": "Responsável pela construção e evolução do dashboard analítico do CRM HofOS, reunindo indicadores comerciais, financeiros, de marketing e de atendimento. Atuação desde a definição das métricas e regras de negócio até consultas SQL, interfaces, filtros, detalhamentos, exportações e validação da consistência dos indicadores.",
+  "impact": "Centralização das análises do CRM com exploração dos indicadores e padronização das regras de leitura.",
+  "categories": [
+    "bi",
+    "sql"
+  ],
+  "tags": [
+    "React",
+    "TypeScript",
+    "NestJS",
+    "Prisma",
+    "PostgreSQL",
+    "SQL"
+  ],
+  "image": "/img/projetos/dashboard-hofos/01-dashboard-visao-geral.png",
+  "links": {
+    "details": "/projetos/dashboard-hofos",
+    "github": "",
+    "demo": ""
+  }
+},
+
+{
+  "title": "Reconstrução do BI Comercial — Reconecta",
+  "subtitle": "Integração de fontes e padronização do funil comercial",
+  "desc": "Reconstrução do BI de Marketing, Pré-vendas, Vendas e Pós-vendas, com consultas SQL, integração de fontes e dashboards em Streamlit e Looker Studio.",
+  "impact": "Padronização das regras de leitura dos indicadores e investigação de divergências entre fontes e relatórios.",
+  "categories": [
+    "bi",
+    "sql",
+    "api"
+  ],
+  "tags": [
+    "Python",
+    "PostgreSQL",
+    "SQL",
+    "Streamlit",
+    "Looker Studio"
+  ],
+  "type": "Case",
+  "badge": "Reconecta",
+  "image": "/img/projetos/bi-comercial/01-visao-geral-vendas.png",
+  "links": {
+    "details": "/projetos/bi-comercial-reconecta",
+    "github": "",
+    "demo": ""
+  }
+},
+{
+  "title": "Saúde dos Dados com Python",
+  "subtitle": "Monitoramento de qualidade e gestão de alertas",
+  "desc": "Projeto desenvolvido em Python, com interface Streamlit e persistência em PostgreSQL, para identificar mudanças nas fontes e inconsistências que afetam os indicadores do BI.",
+  "impact": "Estruturação de uma fila de alertas com histórico e silenciamentos para apoiar a investigação de inconsistências.",
+  "categories": [
+    "auto",
+    "sql"
+  ],
+  "tags": [
+    "Python",
+    "Streamlit",
+    "PostgreSQL",
+    "Qualidade de dados"
+  ],
+  "type": "Case",
+  "badge": "Python",
+  "image": "/img/projetos/saude-dos-dados/01-visao-geral.png",
+  "links": {
+    "details": "/projetos/saude-dos-dados",
+    "github": "",
+    "demo": ""
+  }
+},
+{
+  "title": "Inteligência de Procedimentos e Estoque — HofOS",
+  "subtitle": "Consumo de produtos e custos de materiais",
+  "desc": "Participação no desenvolvimento de análises de procedimentos realizados, produtos consumidos, contatos atendidos e custos de materiais, com recortes por período e profissional.",
+  "impact": "Visibilidade do consumo registrado e dos custos conhecidos, com identificação de lacunas nos registros.",
+  "categories": [
+    "bi",
+    "sql"
+  ],
+  "tags": [
+    "PostgreSQL",
+    "Prisma",
+    "NestJS",
+    "React",
+    "TypeScript"
+  ],
+  "type": "Case",
+  "badge": "Reconecta",
+  "image": "/img/projetos/procedimentos-estoque/01-indicadores-ranking-procedimentos.png",
+  "links": {
+    "details": "/projetos/procedimentos-estoque",
+    "github": "",
+    "demo": ""
+  }
+},
+
   {
     title: "Análise Pareto ABC com PostgreSQL e Power BI",
     type: "Projeto",

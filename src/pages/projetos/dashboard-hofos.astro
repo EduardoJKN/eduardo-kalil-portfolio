@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout title="Dashboard CRM HofOS — Eduardo Kalil">
+  <section class="mx-auto w-full max-w-6xl px-6 py-14 space-y-12">
+    <header class="space-y-5">
+      <div class="flex flex-wrap gap-2"><span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">React</span><span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">TypeScript</span><span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">NestJS</span><span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">Prisma</span><span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">PostgreSQL</span><span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">SQL</span></div>
+      <h1 class="max-w-4xl text-4xl font-extrabold tracking-tight text-zinc-900 md:text-5xl">Construção e evolução do Dashboard — CRM HofOS</h1>
+      <p class="max-w-3xl text-base leading-7 text-zinc-600">Responsável pela construção e evolução do dashboard analítico do CRM HofOS, reunindo indicadores comerciais, financeiros, de marketing e de atendimento. Atuação desde a definição das métricas e regras de negócio até consultas SQL, interfaces, filtros, detalhamentos, exportações e validação da consistência dos indicadores.</p>
+      <a href="/projetos" class="inline-flex rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">← Voltar para projetos</a>
+    </header>
+    <!-- portfolio-galeria-demo-v1 -->
+    <section class="space-y-5" aria-label="Demonstração visual do projeto">
+      <div class="space-y-2">
+        <h2 class="text-2xl font-semibold text-zinc-900">Demonstração do projeto</h2>
+        <p class="text-sm leading-6 text-zinc-600">Interfaces do projeto em ambiente de demonstração. Todos os dados apresentados são fictícios e não representam resultados reais. Clique nas imagens para ampliar em uma nova aba.</p>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <figure class="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm md:col-span-2">
+          <a href="/img/projetos/dashboard-hofos/01-dashboard-visao-geral.png" target="_blank" rel="noopener noreferrer" class="block transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900" aria-label="Ampliar: Visão geral com indicadores do funil comercial e resumo financeiro. (nova aba)">
+            <img src="/img/projetos/dashboard-hofos/01-dashboard-visao-geral.png" alt="Visão geral com indicadores do funil comercial e resumo financeiro. Dados fictícios." width="1680" height="1050" loading="lazy" decoding="async" class="block h-auto w-full" />
+          </a>
+          <figcaption class="space-y-2 p-4">
+            <span class="inline-flex rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-700">Dados fictícios para demonstração</span>
+            <p class="text-sm leading-6 text-zinc-600">Visão geral com indicadores do funil comercial e resumo financeiro.</p>
+          </figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+          <a href="/img/projetos/dashboard-hofos/03-dashboard-performance-vendas.png" target="_blank" rel="noopener noreferrer" class="block transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900" aria-label="Ampliar: Performance de vendas com receita, ticket médio e pódio de vendedores. (nova aba)">
+            <img src="/img/projetos/dashboard-hofos/03-dashboard-performance-vendas.png" alt="Performance de vendas com receita, ticket médio e pódio de vendedores. Dados fictícios." width="1680" height="1050" loading="lazy" decoding="async" class="block h-auto w-full" />
+          </a>
+          <figcaption class="space-y-2 p-4">
+            <span class="inline-flex rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-700">Dados fictícios para demonstração</span>
+            <p class="text-sm leading-6 text-zinc-600">Performance de vendas com receita, ticket médio e pódio de vendedores.</p>
+          </figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+          <a href="/img/projetos/dashboard-hofos/04-construtor-relatorios-preenchido.png" target="_blank" rel="noopener noreferrer" class="block transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900" aria-label="Ampliar: Construtor de relatórios com seleção de seções e prévia do documento. (nova aba)">
+            <img src="/img/projetos/dashboard-hofos/04-construtor-relatorios-preenchido.png" alt="Construtor de relatórios com seleção de seções e prévia do documento. Dados fictícios." width="1680" height="1050" loading="lazy" decoding="async" class="block h-auto w-full" />
+          </a>
+          <figcaption class="space-y-2 p-4">
+            <span class="inline-flex rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-700">Dados fictícios para demonstração</span>
+            <p class="text-sm leading-6 text-zinc-600">Construtor de relatórios com seleção de seções e prévia do documento.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="grid gap-5 md:grid-cols-3"><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h2 class="text-lg font-semibold text-zinc-900">Contexto</h2><p class="mt-3 text-sm leading-6 text-zinc-600">Reunir as diferentes áreas do CRM em uma experiência analítica integrada, com indicadores compreensíveis e critérios consistentes.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h2 class="text-lg font-semibold text-zinc-900">Minha responsabilidade</h2><p class="mt-3 text-sm leading-6 text-zinc-600">Responsável pelo projeto de construção e evolução do dashboard, conectando regras de negócio, consultas e experiência de uso.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h2 class="text-lg font-semibold text-zinc-900">Entrega</h2><p class="mt-3 text-sm leading-6 text-zinc-600">Dashboard com nove áreas, filtros, detalhamentos e relatórios personalizados para apoiar o acompanhamento gerencial e operacional.</p></div></section><section class="space-y-5"><h2 class="text-2xl font-semibold text-zinc-900">Áreas do dashboard</h2><div class="grid gap-5 md:grid-cols-2"><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-semibold text-zinc-900">Geral e Clientes</h3><p class="mt-3 text-sm leading-6 text-zinc-600">Visões consolidadas para acompanhamento dos indicadores e da base de clientes.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-semibold text-zinc-900">Marketing</h3><p class="mt-3 text-sm leading-6 text-zinc-600">Análise de campanhas, investimento e origem dos leads, com revisão das regras de atribuição.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-semibold text-zinc-900">Financeiro</h3><p class="mt-3 text-sm leading-6 text-zinc-600">Acompanhamento financeiro e conferência dos critérios de datas e regimes utilizados nas análises.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-semibold text-zinc-900">Vendas</h3><p class="mt-3 text-sm leading-6 text-zinc-600">Funil comercial, agendamentos, performance de vendas, rankings e produtividade.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-semibold text-zinc-900">Conversas e Pendências</h3><p class="mt-3 text-sm leading-6 text-zinc-600">Visões de atendimento e acompanhamento das pendências operacionais.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-semibold text-zinc-900">Quiz</h3><p class="mt-3 text-sm leading-6 text-zinc-600">Análise de respostas e detalhamentos, com correções na atualização dos dados conforme os filtros.</p></div><div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-semibold text-zinc-900">Personalizado</h3><p class="mt-3 text-sm leading-6 text-zinc-600">Construtor de relatórios a partir de páginas e seções do dashboard, com organização do conteúdo e opções de exportação.</p></div></div></section><section class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-semibold text-zinc-900">Frentes de trabalho</h2><ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-700"><li>Definição e revisão de métricas, regras de negócio e consultas SQL.</li><li>Construção e evolução das interfaces, abas, subabas e detalhamentos.</li><li>Filtros por período e comparações para exploração dos indicadores.</li><li>Padronização de agendamentos e reagendamentos para evitar contagens duplicadas.</li><li>Evolução de rankings e métricas de performance comercial.</li><li>Conferência de consistência entre cards, tabelas, detalhamentos e exportações.</li></ul><a href="/projetos/procedimentos-estoque" class="mt-6 inline-flex text-sm font-semibold text-zinc-900 underline">Conhecer também o case de Procedimentos e Estoque →</a></section>
+    <p class="text-xs leading-6 text-zinc-500">Relato de experiência profissional. As imagens foram capturadas em uma demonstração local com dados fictícios. Código e dados reais da empresa não são disponibilizados neste portfólio.</p>
+  </section>
+</Layout>
